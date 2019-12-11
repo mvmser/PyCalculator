@@ -3,9 +3,13 @@ Created on Wed Dec 11 14:10:47 2019
 
 @author: SERHIR Mohamed
 """
+import math
 
 # main python program
-response = ['Welcome to smart calculator', '            ', 'Byz !', 'Sorry ,this is beyond my ability']
+
+
+response = ['Welcome to smart calculator', 'Hello user !', 'Thanks for enjoy with me',
+            'Sorry ,this is beyond my ability']
 
 
 # fetching tokens from the text command
@@ -62,6 +66,10 @@ def mod(a, b):
     return a % b
 
 
+def cos(a):
+    return math.cos(a)
+
+
 # Response to command
 # printing - "Thanks for enjoy with me" on exit
 def end():
@@ -70,7 +78,7 @@ def end():
     exit()
 
 
-def myname():
+def my_name():
     print(response[1])
 
 
@@ -79,12 +87,18 @@ def sorry():
 
 
 # Operations - performed on the basis of text tokens
-operations = {'ADD': add, 'PLUS': add, 'SUM': add, 'ADDITION': add, 'SUB': sub, 'SUBTRACT': sub, 'MINUS': sub,
-              'DIFFERENCE': sub, 'LCM': lcm, 'HCF': hcf, 'PRODUCT': mul, 'MULTIPLY': mul, 'MULTIPLICATION': mul,
-              'DIVISION': div, 'MOD': mod, 'REMANDER': mod, 'MODULAS': mod}
+operations = {'ADD': add, 'PLUS': add, 'SUM': add, 'ADDITION': add, 'AJOUTER': add, "AJOUTE": add,
+              'SUB': sub, 'SUBTRACT': sub, 'MINUS': sub, 'DIFFERENCE': sub,
+              'LCM': lcm, 'PPCM': lcm,
+              'HCF': hcf, 'PGCD': hcf,
+              'PRODUCT': mul, 'MULTIPLY': mul, 'MULTIPLICATION': mul,
+              'DIVISION': div, 'DIVIDE': div, 'DIVISE': div,
+              'MOD': mod, 'REMANDER': mod, 'MODULAS': mod,}
+
+operationsSimpleVar = {'COS': cos}
 
 # commands
-commands = {'NAME': myname, 'EXIT': end, 'END': end, 'CLOSE': end}
+commands = {'NAME': my_name, 'EXIT': end, 'END': end, 'CLOSE': end}
 
 print('----' + response[0] + '-----')
 print('----' + response[1] + '-----')
@@ -96,6 +110,15 @@ while True:
             try:
                 l = extract_from_text(text)
                 r = operations[word.upper()](l[0], l[1])
+                print(r)
+            except:
+                print('something went wrong going plz enter again !!')
+            finally:
+                break
+        elif word.upper() in operationsSimpleVar.keys():
+            try:
+                l = extract_from_text(text)
+                r = operationsSimpleVar[word.upper()](l[0])
                 print(r)
             except:
                 print('something went wrong going plz enter again !!')
