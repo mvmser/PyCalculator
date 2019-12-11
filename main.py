@@ -66,11 +66,71 @@ def mod(a, b):
     return a % b
 
 
+# Cosinus
 def cos(a):
     return math.cos(a)
 
+
+# Sinus
 def sin(a):
     return math.sin(a)
+
+# Tan
+def tan(a):
+    return math.tan(a)
+
+# Acosus
+def acos(a):
+    return math.arcosinus(a)
+
+# Asinus
+def asin(a):
+    return math.asin(a)
+
+# Atan
+def atan(a):
+    return math.atan(a)
+
+# Puissance
+def power(a,b):
+    return math.pow(a,b)
+
+# Puissance 10
+def power_ten(a):
+    return math.pow(10,a)
+
+# Log
+def log_ten(a):
+    return math.log10(a)
+
+# Ln
+def log_two(a):
+    return math.log2(a)
+
+# Exponentiel
+def exp(a):
+    return math.exp(a)
+
+# X power 3
+def x_pow_three(a):
+    return math.pow(a,3)
+
+# Racine carree
+def sqrt(a):
+    return math.sqrt(a)
+
+# Percent
+def percent(a):
+    return a / 10
+
+# Pi
+def pi():
+    return math.pi
+
+# Exponentiel
+def e():
+    return math.e
+
 
 # Response to command
 # printing - "Thanks for enjoy with me" on exit
@@ -95,7 +155,7 @@ operations = {'ADD': add, 'PLUS': add, 'SUM': add, 'ADDITION': add, 'AJOUTER': a
               'HCF': hcf, 'PGCD': hcf,
               'PRODUCT': mul, 'MULTIPLY': mul, 'MULTIPLICATION': mul,
               'DIVISION': div, 'DIVIDE': div, 'DIVISE': div,
-              'MOD': mod, 'REMANDER': mod, 'MODULAS': mod,}
+              'MOD': mod, 'REMANDER': mod, 'MODULAS': mod, }
 
 operationsSimpleVar = {'COS': cos, 'COSINUS': cos,
                        'SIN': sin, 'SINUS': sin,
