@@ -84,17 +84,17 @@ def tan(a):
 
 
 # Acosus
-def acos(a):
-    return math.arcosinus(a)
+def a_cos(a):
+    return math.acos(a)
 
 
 # Asinus
-def asin(a):
+def a_sin(a):
     return math.asin(a)
 
 
 # Atan
-def atan(a):
+def a_tan(a):
     return math.atan(a)
 
 
@@ -162,6 +162,7 @@ def find_delta(a, b, c):
 def fact(a):
     return math.factorial(a)
 
+
 # Equation du second degre
 def sde(a, b, c):
     delta = find_delta(a, b, c)
@@ -204,11 +205,12 @@ operations = {'ADD': add, 'PLUS': add, 'SUM': add, 'ADDITION': add, 'AJOUTER': a
 operationsSimpleVar = {'COS': cos, 'COSINUS': cos,
                        'SIN': sin, 'SINUS': sin,
                        'TAN': tan, 'TANGENTE': tan,
-                       'ACOS': acos, 'ARCOSINUS': acos, 'ARC COSINUS': acos, 'COSINUS INVERSE': acos,
-                       'COS INVERSE': acos,
-                       'ASIN': acos, 'ARCSINUS': acos, 'ARC SINUS': acos, 'SINUS INVERSE': acos, 'SIN INVERSE': acos,
-                       'ATAN': acos, 'ARCTAN': acos, 'ARC TANGENTE': acos, 'TAN INVERSE': acos,
-                       'TANGENTE INVERSE': acos,
+                       'ACOS': a_cos, 'ARCOSINUS': a_cos, 'ARC COSINUS': a_cos, 'COSINUS INVERSE': a_cos,
+                       'COS INVERSE': a_cos,
+                       'ASIN': a_sin, 'ARCSINUS': a_sin, 'ARC SINUS': a_sin, 'SINUS INVERSE': a_sin,
+                       'SIN INVERSE': a_sin,
+                       'ATAN': a_tan, 'ARCTAN': a_tan, 'ARC TANGENTE': a_tan, 'TAN INVERSE': a_tan,
+                       'TANGENTE INVERSE': a_tan,
                        'PUISSANCE': power, 'POWER': power, 'PUISS': power, 'POW': power,
                        'PUISSANCE10': power_ten, 'PUISS10': power_ten, 'POW10': power_ten, 'PUISSANCE 10': power_ten,
                        'LOG': log_ten, 'LOG10': log_ten, 'LOGARITHME10': log_ten, 'LOG DE 10': log_ten,
