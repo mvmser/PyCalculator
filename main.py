@@ -75,74 +75,91 @@ def cos(a):
 def sin(a):
     return math.sin(a)
 
+
 # Tan
 def tan(a):
     return math.tan(a)
+
 
 # Acosus
 def acos(a):
     return math.arcosinus(a)
 
+
 # Asinus
 def asin(a):
     return math.asin(a)
+
 
 # Atan
 def atan(a):
     return math.atan(a)
 
+
 # Puissance
-def power(a,b):
-    return math.pow(a,b)
+def power(a, b):
+    return math.pow(a, b)
+
 
 # Puissance 10
 def power_ten(a):
-    return math.pow(10,a)
+    return math.pow(10, a)
+
 
 # Log
 def log_ten(a):
     return math.log10(a)
 
+
 # Ln
 def log_two(a):
     return math.log2(a)
+
 
 # Exponentiel
 def exp(a):
     return math.exp(a)
 
+
 # X power 3
 def x_pow_three(a):
-    return math.pow(a,3)
+    return math.pow(a, 3)
+
 
 # Racine carree
 def sqrt(a):
     return math.sqrt(a)
 
+
 # Percent
 def percent(a):
     return a / 10
+
 
 # Pi
 def pi():
     return math.pi
 
+
 # Exponentiel
 def e():
     return math.e
 
-def calcualte_delta(a,b,c):
-    return b*b-4*a*c
 
-def sde(a,b,c):
-    delta = calcualte_delta(a,b,c)
+def find_delta(a, b, c):
+    return b * b - 4 * a * c
+
+
+def sde(a, b, c):
+    delta = find_delta(a, b, c)
     if delta > 0:
-        result = [(-b - math.sqrt(delta)) / (2*a), (-b + sqrt(delta)) / (2*a)]
+        result = [(-b - math.sqrt(delta)) / (2 * a), (-b + sqrt(delta)) / (2 * a)]
     elif delta < 0:
         result = []
     else:
-        result = [-b / (2*a)]
+        result = [-b / (2 * a)]
     return result
+
 
 # Response to command
 # printing - "Thanks for enjoy with me" on exit
@@ -172,15 +189,18 @@ operations = {'ADD': add, 'PLUS': add, 'SUM': add, 'ADDITION': add, 'AJOUTER': a
 operationsSimpleVar = {'COS': cos, 'COSINUS': cos,
                        'SIN': sin, 'SINUS': sin,
                        'TAN': tan, 'TANGENTE': tan,
-                       'ACOS': acos, 'ARCOSINUS': acos, 'ARC COSINUS': acos, 'COSINUS INVERSE': acos, 'COS INVERSE': acos,
-                       'ASIN': acos, 'ARCSINUS': acos, 'ARC SINUS': acos, 'SINUS INVERSE': acos,'SIN INVERSE': acos, 
-                       'ATAN': acos, 'ARCTAN': acos, 'ARC TANGENTE': acos, 'TAN INVERSE': acos, 'TANGENTE INVERSE': acos,
+                       'ACOS': acos, 'ARCOSINUS': acos, 'ARC COSINUS': acos, 'COSINUS INVERSE': acos,
+                       'COS INVERSE': acos,
+                       'ASIN': acos, 'ARCSINUS': acos, 'ARC SINUS': acos, 'SINUS INVERSE': acos, 'SIN INVERSE': acos,
+                       'ATAN': acos, 'ARCTAN': acos, 'ARC TANGENTE': acos, 'TAN INVERSE': acos,
+                       'TANGENTE INVERSE': acos,
                        'PUISSANCE': power, 'POWER': power, 'PUISS': power, 'POW': power,
                        'PUISSANCE10': power_ten, 'PUISS10': power_ten, 'POW10': power_ten, 'PUISSANCE 10': power_10,
                        'LOG': log_ten, 'LOG10': log_ten, 'LOGARITHME10': log_ten, 'LOG DE 10': log_ten,
                        'LN': log_two, 'LOG2': log_two, 'LOGARITHME2': log_two, 'LOG DE 2': log_two,
                        'EXP': exp, 'EXPONENTIELLE': exp, 'EXPONENTIEL': exp,
-                       'PUISSANCE 3': x_pow_three, 'PUISSANCE3': x_pow_three, 'PUISS3': x_pow_three, 'POW3': x_pow_three,
+                       'PUISSANCE 3': x_pow_three, 'PUISSANCE3': x_pow_three, 'PUISS3': x_pow_three,
+                       'POW3': x_pow_three,
                        'RACINECARREE': sqrt, 'RACINE CARREE': sqrt, 'SQRT': sqrt,
                        'POURCENTAGE': percent, 'PERCENT': percent}
 
