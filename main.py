@@ -109,7 +109,7 @@ operationsSimpleVar = {'COS': cos, 'COSINUS': cos,
                        'LN': log_2, 'LOG2': log_2, 'LOGARITHME2': log_2, 'LOG DE 2': log_2,
                        'EXP': exp, 'EXPONENTIELLE': exp, 'EXPONENTIEL': exp,
                        'PUISSANCE 3': x_pow_three, 'PUISSANCE3': x_pow_three, 'PUISS3': x_pow_three, 'POW3': x_pow_three,
-                       'RACINECARREE': sqrt, 'RACINE CARREE': sqrt, 'SQRT': sqrt
+                       'RACINECARREE': sqrt, 'RACINE CARREE': sqrt, 'SQRT': sqrt,
                        'POURCENTAGE': percent, 'PERCENT': percent}
 
 # commands
