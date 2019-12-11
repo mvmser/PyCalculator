@@ -98,7 +98,19 @@ operations = {'ADD': add, 'PLUS': add, 'SUM': add, 'ADDITION': add, 'AJOUTER': a
               'MOD': mod, 'REMANDER': mod, 'MODULAS': mod,}
 
 operationsSimpleVar = {'COS': cos, 'COSINUS': cos,
-                       'SIN': sin, 'SINUS': sin}
+                       'SIN': sin, 'SINUS': sin,
+                       'TAN': tan, 'TANGENTE': tan,
+                       'ACOS': acos, 'ARCOSINUS': acos, 'ARC COSINUS': acos, 'COSINUS INVERSE': acos, 'COS INVERSE': acos,
+                       'ASIN': acos, 'ARCSINUS': acos, 'ARC SINUS': acos, 'SINUS INVERSE': acos,'SIN INVERSE': acos, 
+                       'ATAN': acos, 'ARCTAN': acos, 'ARC TANGENTE': acos, 'TAN INVERSE': acos, 'TANGENTE INVERSE': acos,
+                       'PUISSANCE': power, 'POWER': power, 'PUISS': power, 'POW': power,
+                       'PUISSANCE10': power_10, 'PUISS10': power_10, 'POW10': power_10, 'PUISSANCE 10': power_10,
+                       'LOG': log_10, 'LOG10': log_10, 'LOGARITHME10': log_10, 'LOG DE 10': log_10,
+                       'LN': log_2, 'LOG2': log_2, 'LOGARITHME2': log_2, 'LOG DE 2': log_2,
+                       'EXP': exp, 'EXPONENTIELLE': exp, 'EXPONENTIEL': exp,
+                       'PUISSANCE 3': x_pow_three, 'PUISSANCE3': x_pow_three, 'PUISS3': x_pow_three, 'POW3': x_pow_three,
+                       'RACINECARREE': sqrt, 'RACINE CARREE': sqrt, 'SQRT': sqrt
+                       'POURCENTAGE': percent, 'PERCENT': percent}
 
 # commands
 commands = {'NAME': my_name, 'EXIT': end, 'END': end, 'CLOSE': end}
