@@ -6,8 +6,6 @@ Created on Wed Dec 11 14:10:47 2019
 import math
 
 # main python program
-
-
 response = ['Welcome to smart calculator', 'Hello user !', 'Thanks for enjoy with me',
             'Sorry ,this is beyond my ability']
 
@@ -16,6 +14,10 @@ response = ['Welcome to smart calculator', 'Hello user !', 'Thanks for enjoy wit
 def extract_from_text(text):
     l = []
     for t in text.split(' '):
+        if t.upper() == 'PI':
+            t = math.pi
+        elif t.upper() == "E":
+            t = math.e
         try:
             l.append(float(t))
         except ValueError:
@@ -131,6 +133,11 @@ def sqrt(a):
     return math.sqrt(a)
 
 
+# Racine enieme
+def n_sqrt(a, n):
+    return power(a, 1 / n)
+
+
 # Percent
 def percent(a):
     return a / 10
@@ -146,10 +153,16 @@ def e():
     return math.e
 
 
+# To find delta
 def find_delta(a, b, c):
     return b * b - 4 * a * c
 
 
+# Factorial
+def fact(a):
+    return math.factorial(a)
+
+# Equation du second degre
 def sde(a, b, c):
     delta = find_delta(a, b, c)
     if delta > 0:
@@ -160,6 +173,8 @@ def sde(a, b, c):
         result = [-b / (2 * a)]
     return result
 
+
+#
 
 # Response to command
 # printing - "Thanks for enjoy with me" on exit
@@ -195,7 +210,7 @@ operationsSimpleVar = {'COS': cos, 'COSINUS': cos,
                        'ATAN': acos, 'ARCTAN': acos, 'ARC TANGENTE': acos, 'TAN INVERSE': acos,
                        'TANGENTE INVERSE': acos,
                        'PUISSANCE': power, 'POWER': power, 'PUISS': power, 'POW': power,
-                       'PUISSANCE10': power_ten, 'PUISS10': power_ten, 'POW10': power_ten, 'PUISSANCE 10': power_10,
+                       'PUISSANCE10': power_ten, 'PUISS10': power_ten, 'POW10': power_ten, 'PUISSANCE 10': power_ten,
                        'LOG': log_ten, 'LOG10': log_ten, 'LOGARITHME10': log_ten, 'LOG DE 10': log_ten,
                        'LN': log_two, 'LOG2': log_two, 'LOGARITHME2': log_two, 'LOG DE 2': log_two,
                        'EXP': exp, 'EXPONENTIELLE': exp, 'EXPONENTIEL': exp,
