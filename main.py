@@ -69,6 +69,8 @@ def mod(a, b):
 def cos(a):
     return math.cos(a)
 
+def sin(a):
+    return math.sin(a)
 
 # Response to command
 # printing - "Thanks for enjoy with me" on exit
@@ -95,7 +97,8 @@ operations = {'ADD': add, 'PLUS': add, 'SUM': add, 'ADDITION': add, 'AJOUTER': a
               'DIVISION': div, 'DIVIDE': div, 'DIVISE': div,
               'MOD': mod, 'REMANDER': mod, 'MODULAS': mod,}
 
-operationsSimpleVar = {'COS': cos}
+operationsSimpleVar = {'COS': cos, 'COSINUS': cos,
+                       'SIN': sin, 'SINUS': sin}
 
 # commands
 commands = {'NAME': my_name, 'EXIT': end, 'END': end, 'CLOSE': end}
