@@ -131,6 +131,18 @@ def pi():
 def e():
     return math.e
 
+def calcualte_delta(a,b,c):
+    return b*b-4*a*c
+
+def sde(a,b,c):
+    delta = calcualte_delta(a,b,c)
+    if delta > 0:
+        result = [(-b - math.sqrt(delta)) / (2*a), (-b + sqrt(delta)) / (2*a)]
+    elif delta < 0:
+        result = []
+    else:
+        result = [-b / (2*a)]
+    return result
 
 # Response to command
 # printing - "Thanks for enjoy with me" on exit
@@ -164,7 +176,7 @@ operationsSimpleVar = {'COS': cos, 'COSINUS': cos,
                        'ASIN': acos, 'ARCSINUS': acos, 'ARC SINUS': acos, 'SINUS INVERSE': acos,'SIN INVERSE': acos, 
                        'ATAN': acos, 'ARCTAN': acos, 'ARC TANGENTE': acos, 'TAN INVERSE': acos, 'TANGENTE INVERSE': acos,
                        'PUISSANCE': power, 'POWER': power, 'PUISS': power, 'POW': power,
-                       'PUISSANCE10': power_10, 'PUISS10': power_10, 'POW10': power_10, 'PUISSANCE 10': power_10,
+                       'PUISSANCE10': power_ten, 'PUISS10': power_ten, 'POW10': power_ten, 'PUISSANCE 10': power_10,
                        'LOG': log_ten, 'LOG10': log_ten, 'LOGARITHME10': log_ten, 'LOG DE 10': log_ten,
                        'LN': log_two, 'LOG2': log_two, 'LOGARITHME2': log_two, 'LOG DE 2': log_two,
                        'EXP': exp, 'EXPONENTIELLE': exp, 'EXPONENTIEL': exp,
