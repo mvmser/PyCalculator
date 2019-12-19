@@ -133,14 +133,14 @@ def sqrt(a):
     return math.sqrt(a)
 
 
-# Racine enieme
+# Racine n-ieme
 def n_sqrt(a, n):
-    return power(a, 1 / n)
+    return power(a, 1.0 / n)
 
 
 # Percent
 def percent(a):
-    return a / 10
+    return a / 100
 
 
 # Pi
@@ -148,14 +148,9 @@ def pi():
     return math.pi
 
 
-# Exponentiel
+# Exponential
 def e():
     return math.e
-
-
-# To find delta
-def find_delta(a, b, c):
-    return b * b - 4 * a * c
 
 
 # Factorial
@@ -163,19 +158,23 @@ def fact(a):
     return math.factorial(a)
 
 
+# To find delta
+def find_delta(a, b, c):
+    return b * b - 4 * a * c
+
+
 # Equation du second degre
 def sde(a, b, c):
     delta = find_delta(a, b, c)
     if delta > 0:
-        result = [(-b - math.sqrt(delta)) / (2 * a), (-b + sqrt(delta)) / (2 * a)]
+        result = "x1 = " + str((-b - math.sqrt(delta)) / (2 * a)) + " and x2 = " + str((-b + sqrt(delta)) / (2 * a))
     elif delta < 0:
-        result = []
+        result = "x1 = " + str((-b) / (2 * a)) + " -i" + str(math.sqrt(-delta) / (2 * a)) + " and x2 = " \
+                 + str((-b) / (2 * a)) + " +i" + str(math.sqrt(-delta) / (2 * a))
     else:
         result = [-b / (2 * a)]
     return result
 
-
-#
 
 # Response to command
 # printing - "Thanks for enjoy with me" on exit
@@ -200,7 +199,8 @@ operations = {'ADD': add, 'PLUS': add, 'SUM': add, 'ADDITION': add, 'AJOUTER': a
               'HCF': hcf, 'PGCD': hcf,
               'PRODUCT': mul, 'MULTIPLY': mul, 'MULTIPLICATION': mul,
               'DIVISION': div, 'DIVIDE': div, 'DIVISE': div,
-              'MOD': mod, 'REMANDER': mod, 'MODULAS': mod, }
+              'MOD': mod, 'REMANDER': mod, 'MODULAS': mod,
+              'RACINE_NIEME': n_sqrt}
 
 operationsSimpleVar = {'COS': cos, 'COSINUS': cos,
                        'SIN': sin, 'SINUS': sin,
@@ -220,6 +220,8 @@ operationsSimpleVar = {'COS': cos, 'COSINUS': cos,
                        'POW3': x_pow_three,
                        'RACINECARREE': sqrt, 'RACINE CARREE': sqrt, 'SQRT': sqrt,
                        'POURCENTAGE': percent, 'PERCENT': percent}
+
+operationsThreeVar = {'SDE': sde}
 
 # commands
 commands = {'NAME': my_name, 'EXIT': end, 'END': end, 'CLOSE': end}
@@ -248,8 +250,17 @@ while True:
                 print('something went wrong going plz enter again !!')
             finally:
                 break
+        elif word.upper() in operationsThreeVar.keys():
+            try:
+                l = extract_from_text(text)
+                r = operationsThreeVar[word.upper()](l[0], l[1], l[2])
+                print(r)
+            except:
+                print('something went wrong going plz enter again !!')
+            finally:
+                break
         elif word.upper() in commands.keys():
             commands[word.upper()]()
             break
-        else:
-            sorry()
+    else:
+        sorry()
